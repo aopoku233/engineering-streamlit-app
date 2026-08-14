@@ -38,8 +38,7 @@ else:
     viscosity = st.sidebar.number_input("Dynamic viscosity μ (Pa·s)", min_value=1e-6, value=0.001, format="%.6f")
     fluid = Fluid.custom(name, density, viscosity)
 
-st.sidebar.markdown(f"**Current fluid:** {fluid.name}  
-ρ = {fluid.density:.3f} kg/m³ | μ = {fluid.viscosity:.6f} Pa·s")
+st.sidebar.markdown(f"**Current fluid:** {fluid.name}  \nρ = {fluid.density:.3f} kg/m³ | μ = {fluid.viscosity:.6f} Pa·s")
 
 st.sidebar.header("Pipe Geometry")
 diameter_mm = st.sidebar.number_input("Internal diameter D (mm)", min_value=1.0, value=50.0, step=1.0)
